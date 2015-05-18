@@ -1,3 +1,17 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<div class="app">
+    <header class="page-header">
+        <h1>Salut la planète</h1>
+        <p>Welcome to the interSerre environement</p>
+    </header>
 
-{{outlet}}
+    <nav class="header-nav">
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Gestion des serres</a></li>
+            <li>{{#link-to 'analysis' }}Statistiques & comptes rendus{{/link-to}}</li>
+        </ul>
+    </nav>
+  <div class="content">
+    {{outlet}}
+  </div>
+</div>
