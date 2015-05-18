@@ -6,4 +6,13 @@
 .Management__greenhouse {
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  dl {
+    @include container(100%);
+  }
+  dt {
+    @include span(first 2 of 12);
+  }
+  dd {
+    @include span(last 10 of 12);
+  }
 }

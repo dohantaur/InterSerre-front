@@ -1,25 +1,30 @@
-<h2>Management</h2>
 <ul class="Management__list">
   {{#each model as |greenHouse|}}
       <li class="Management__greenhouse">
           <dl>
-              <dt></dt>
+              <dt>Identifiant</dt>
               <dd>{{greenHouse.id}}</dd>
+              <dt>Largeur</dt>
+              <dd>{{greenHouse.width}}</dd>
+              <dt>Heigh</dt>
+              <dd>{{greenHouse.height}}</dd>
+              <dt>Type</dt>
+              <dd>{{greenHouse.type}}</dd>
+              <dt>Etape</dt>
+              <dd>{{greenHouse.step}}</dd>
+              <dt>Cultivation</dt>
+              <dd>{{greenHouse.cultivation}}</dd>
+              <dt>Observation</dt>
+              <dd>{{greenHouse.observation}}</dd>
+              <dt>Realm</dt>
+              <dd>{{greenHouse.realm.id}}</dd>
           </dl>
-          <div></div>
-          <div>{{greenHouse.width}}</div>
-          <div>{{greenHouse.height}}</div>
-          <div>{{greenHouse.type}}</div>
-          <div>{{greenHouse.step}}</div>
-          <div>{{greenHouse.cultivation}}</div>
-          <div>{{greenHouse.observation}}</div>
-          <div>{{greenHouse.realm.id}}</div>
           <ul>
-              {{#each greenHouse.realm.sensors as |sensor|}}
+            {{#each greenHouse.realm.sensors as |sensor|}}
                 <li>
-                    {{sensor.id}}, {{sensor.type}}, {{sensor.name}}
+                  {{sensor.id}}, {{sensor.type}}, {{sensor.name}}
                 </li>
-              {{/each}}
+            {{/each}}
           </ul>
       </li>
   {{/each}}
