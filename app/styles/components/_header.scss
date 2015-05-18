@@ -1,9 +1,13 @@
 .page-header {
   margin-bottom: 15px;
   color: #ebebeb;
+  h1 {
+    letter-spacing: 0.3px;
+  }
   p {
     font-size: 2.2em;
     font-weight: 200;
     margin: 0;
+    letter-spacing: 6px;
   }
 }
