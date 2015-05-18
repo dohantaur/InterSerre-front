@@ -7,7 +7,7 @@ var greenHouse = DS.Model.extend({
   step: DS.attr('string'),
   cultivation: DS.attr('string'),
   observation: DS.attr('string'),
-  realm: DS.belongsTo('realm')
+  realm: DS.belongsTo('realm', {async: true})
 });
 
 greenHouse.reopenClass({

@@ -1,12 +1,12 @@
 .header-nav {
-  color: white;
+  color: #ebebeb;
   height: 50px;
   margin: 0 -10px;
   ul {
     list-style: none;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to right, #59586b 0%, #59586b 40%, transparent 80%, transparent 100% );
+    background-image: linear-gradient(to right, #4e5d6c 0%, #4e5d6c 40%, transparent 80%, transparent 100% );
     margin: 0;
     padding: 0;
     li {
@@ -14,16 +14,16 @@
       height: 100%;
       padding: 0;
       text-align: center;
-      background-color: #59586b;
+      background-color: #4e5d6c;
       a {
         display: inline-block;
         padding: 0 1em;
         line-height: 50px;
         font-size: 20px;
-        color: white;
+        color: #ebebeb;
         text-decoration: none;
         &:hover {
-          background-color: lighten(#59586b, 10%);
+          background-color: #485563;
         }
       }
     }
