@@ -2,19 +2,47 @@
   color: #ebebeb;
   height: 50px;
   margin: 0 -10px;
+  @include susy-breakpoint(300px 624px) {
+    height: auto;
+  }
   ul {
     list-style: none;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to right, #4e5d6c 0%, #4e5d6c 40%, transparent 80%, transparent 100% );
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(to right, #4e5d6c 0%, #4e5d6c 40%, transparent 80%, transparent 100% );
+    @include susy-breakpoint(1520px) {
+      background-image: linear-gradient(to right, #4e5d6c 0%, #4e5d6c 40%, transparent 80%, transparent 100% );
+    }
+    @include susy-breakpoint(1270px 1519px) {
+      background-image: linear-gradient(to right, #4e5d6c 0%, #4e5d6c 50%, transparent 80%, transparent 100% );
+    }
+    @include susy-breakpoint(1016px 1519px) {
+      background-image: linear-gradient(to right, #4e5d6c 0%, #4e5d6c 55%, transparent 80%, transparent 100% );
+    }
+    @include susy-breakpoint(860px 1015px) {
+      background-image: linear-gradient(to right, #4e5d6c 0%, #4e5d6c 65%, transparent 95%, transparent 100% );
+    }
+    @include susy-breakpoint(625px 859px) {
+      background-image: linear-gradient(to right, #4e5d6c 0%, #4e5d6c 88%, transparent 100% );
+    }
+    @include susy-breakpoint(300px 624px) {
+      background-color: #4e5d6c;
+      @include clearfix;
+      display: block;
+    }
     li {
       float: left;
-      height: 100%;
+      height: 50px;
       padding: 0;
       text-align: center;
       background-color: #4e5d6c;
+      @include susy-breakpoint(300px 624px) {
+        display: block;
+        float: none;
+        text-align: left;
+      }
       a {
         display: inline-block;
         padding: 0 1em;
