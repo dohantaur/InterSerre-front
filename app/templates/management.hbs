@@ -10,6 +10,13 @@
           <div>{{greenHouse.cultivation}}</div>
           <div>{{greenHouse.observation}}</div>
           <div>{{greenHouse.realm.id}}</div>
+          <ul>
+              {{#each greenHouse.realm.sensors as |sensor|}}
+                <li>
+                    {{sensor.id}}, {{sensor.type}}, {{sensor.name}}
+                </li>
+              {{/each}}
+          </ul>
       </li>
   {{/each}}
 

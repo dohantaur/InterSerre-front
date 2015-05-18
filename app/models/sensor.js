@@ -23,4 +23,4 @@ sensor.reopenClass({
   ]
 });
 
-export default sensor
+export default sensor;
