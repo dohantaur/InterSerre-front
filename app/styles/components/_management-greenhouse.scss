@@ -6,13 +6,59 @@
 .Management__greenhouse {
   padding: 10px;
   border-bottom: 1px solid #ccc;
-  dl {
+  .info {
+    margin-top: 20px;
+  }
+  .info, dl {
     @include container(100%);
+    dt {
+      @include span(first 2 of 12);
+    }
+    dd {
+      @include span(last 10 of 12);
+    }
   }
-  dt {
-    @include span(first 2 of 12);
+  .sensor {
+    padding: 10px 0;
   }
-  dd {
-    @include span(last 10 of 12);
+
+  .Management__greenhouse-header{
+    @include container(100%);
+    margin: 10px 0;
+    line-height: 2.4em;
+    color: #628BB3;
+    .number, .type {
+      float: left;
+    }
+    .number {
+      font-size: 2.4em;
+    }
+    .type {
+      font-size: 1.8em;
+      font-style: italic;
+      padding-left: 20px;
+    }
+  }
+  .dimention {
+    display: block;
+    width: 100%;
+    font-size: 0.9em;
+    color: darken(#628BB3, 30%);
+  }
+  .realm {
+    padding: 10px;
+    background-color: #e8e8e8;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .realm-header {
+
+    span:last-child {
+      padding: 0 10px;
+      font-weight: bold;
+    }
   }
 }

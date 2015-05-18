@@ -1,31 +1,46 @@
 <ul class="Management__list">
   {{#each model as |greenHouse|}}
       <li class="Management__greenhouse">
-          <dl>
-              <dt>Identifiant</dt>
-              <dd>{{greenHouse.id}}</dd>
-              <dt>Largeur</dt>
-              <dd>{{greenHouse.width}}</dd>
-              <dt>Heigh</dt>
-              <dd>{{greenHouse.height}}</dd>
-              <dt>Type</dt>
-              <dd>{{greenHouse.type}}</dd>
+        <div class="Management__greenhouse-header">
+          <div class="number">
+            <span>Serre&nbsp;<small>n°</small></span>
+            <span>{{greenHouse.id}}</span>
+          </div>
+          <div class="type">
+            <span>-</span>
+            <span>{{greenHouse.type}}</span>
+            <span>-</span>
+          </div>
+        </div>
+        <div class="dimention">
+          <span>Dimention&nbsp;</span>
+          <span>{{greenHouse.width}} &times; {{greenHouse.height}}</span>
+        </div>
+
+
+          <dl class="info">
               <dt>Etape</dt>
               <dd>{{greenHouse.step}}</dd>
               <dt>Cultivation</dt>
               <dd>{{greenHouse.cultivation}}</dd>
               <dt>Observation</dt>
               <dd>{{greenHouse.observation}}</dd>
-              <dt>Realm</dt>
-              <dd>{{greenHouse.realm.id}}</dd>
           </dl>
-          <ul>
-            {{#each greenHouse.realm.sensors as |sensor|}}
-                <li>
-                  {{sensor.id}}, {{sensor.type}}, {{sensor.name}}
-                </li>
-            {{/each}}
-          </ul>
+          <div class="realm">
+            <div class="realm-header">
+              <span>Realm</span>
+              <span>{{greenHouse.realm.id}}</span>
+            </div>
+            <ul>
+              {{#each greenHouse.realm.sensors as |sensor|}}
+                  <li class="sensor">
+                      <div></div>
+                      <div><span>Capteur&nbsp;<small>n°</small></span><span>{{sensor.id}}</span></div>
+                      <div><span>{{sensor.name}}&nbsp;</span><span>{{sensor.lastValue}}</span></div>
+                  </li>
+              {{/each}}
+            </ul>
+          </div>
       </li>
   {{/each}}
 </ul>
