@@ -5,15 +5,20 @@ export default Ember.Route.extend({
     return this.store.find('greenHouse');
   },
 
-  selected: null,
+  _selected: 'null',
+
+  selected: function() {
+    console.log('toto');
+    console.log(this.get('_selected.id'));
+    return this.get('_selected');
+  }.property('_selected'),
 
   actions: {
     editAll: function(greenHouse) {
-      this.set('seleted', greenHouse);
+      this.set('_selected', greenHouse);
       this.render('editAllManagement', {
         outlet: 'editManagement',
-        into: 'management',
-        controller: 'management'
+        into: 'management'
       });
     },
     editCultivation : function(greenHouse) {

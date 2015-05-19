@@ -5,24 +5,27 @@
     <button class="close">&times;</button>
   </div>
   <form class="modal-form" {{action 'saveGreenHouse' selected on='submit'}}>
+    LALALA{{input value= _selected }}LALALA
     <div class="modal-body">
       <div class="form-row">
         <label for="type">Type</label>
-        <input name="type" type="text" value={{slected.type}} />
+        <input name="type" type="text" value={{selected.type}} />
       </div>
       <div class="form-row">
         <label for="step">Etat</label>
-        <input name="step" type="text" value={{slected.step}} />
+        <input name="step" type="text" value={{selected.step}} />
       </div>
       <div class="form-row">
         <label for="width">Largeur</label>
-        <input name="width" type="number" value={{slected.width}} />
+        <input name="width" type="number" value={{selected.width}} />
       </div>
       <div class="form-row">
         <label for="height">Hauteur</label>
-        <input name="height" type="number" value={{slected.height}} />
+        <input name="height" type="number" value={{selected.height}} />
       </div>
     </div>
-    <div class="modal-footer"></div>
+    <div class="modal-footer">
+      <input type="submit" value="sauvegarder">
+    </div>
   </form>
 </div>
