@@ -1,16 +1,18 @@
 .Management__list {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   list-style: none;
-  @include container();
 }
 .Management__greenhouse {
+  background-color: rgba(255,255,255,0.8);
   @include susy-breakpoint(1240px) {
     &:nth-child(2n+1) {
-      @include span(first 1 of 2)
+      @include span(first 49 of 100);
+      @include gutter;
     }
     &:nth-child(2n) {
-      @include span(1 of 2 last)
+      @include span(49 of 100 last);
+      @include gutter;
     }
   }
 
