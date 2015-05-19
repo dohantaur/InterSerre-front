@@ -15,7 +15,7 @@ export default Ember.Route.extend({
 
   actions: {
     editAll: function(greenHouse) {
-      this.transitionTo('management.editAll', greenHouse)
+      this.transitionTo('management.editAll', greenHouse);
     },
     editCultivation : function(greenHouse) {
       this.render('editCultivationManagement', {

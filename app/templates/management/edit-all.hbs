@@ -1,30 +1,42 @@
 <div class="overlayer"></div>
-<div class="Management__modal">
-  <div class="modal-header">
-    <h2>{{id}}</h2>
-    <button class="close">&times;</button>
-  </div>
-  <form class="modal-form" {{action 'saveGreenHouse' selected on='submit'}}>
-    <div class="modal-body">
-      <div class="form-row">
-        <label for="type">Type</label>
-        <input name="type" type="text" value={{model.type}} />
+  <div class="Management__modal">
+      <div class="modal-header">
+          <span>{{id}}</span>
+          <button class="close btn-delet">&times;</button>
       </div>
-      <div class="form-row">
-        <label for="step">Etat</label>
-        <input name="step" type="text" value={{model.step}} />
-      </div>
-      <div class="form-row">
-        <label for="width">Largeur</label>
-        <input name="width" type="number" value={{model.width}} />
-      </div>
-      <div class="form-row">
-        <label for="height">Hauteur</label>
-        <input name="height" type="number" value={{model.height}} />
-      </div>
-    </div>
-    <div class="modal-footer">
-      <input type="submit" value="sauvegarder">
-    </div>
-  </form>
+      <form class="modal-form" {{action 'saveGreenHouse' selected on='submit'}}>
+          <div class="modal-body">
+              <div class="form-row">
+                <label for="type">Type</label>
+                <input name="type" type="text" value={{model.type}} />
+              </div>
+              <div class="form-row">
+                  <label for="step">Étapes</label>
+                      <select name="step" value={{model.step}}>
+                          <option value="Jachère">Jachère</option>
+                          <option value="Semis">Semis</option>
+                          <option value="Plants">Plants</option>
+                          <option value="Fleurs">Fleurs</option>
+                          <option value="Croissance">Croissance</option>
+                          <option value="Maturation">Maturation</option>
+                          <option value="Récolte">Récolte</option>
+                      </select>
+              </div>
+              <div class="form-row">
+                  <label for="width">Dimension </label>
+                  <input name="width" type="number" value={{model.width}} /> &times; <input name="height" type="number" value={{model.height}} />
+              </div>
+              <div class="form-row">
+                  <label for="height">Traitement en cours</label>
+                  <textarea name="cultivation" rows="2" cols="50" type="text" value={{model.cultivation}} />
+              </div>
+              <div class="form-row">
+                  <label for="height">Observations</label>
+                  <textarea name="observation" rows="4" cols="50" type="text" value={{model.observation}} />
+              </div>
+          </div>
+          <div class="modal-footer">
+            <input type="submit" value="sauvegarder">
+          </div>
+    </form>
 </div>
