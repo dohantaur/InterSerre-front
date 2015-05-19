@@ -2,8 +2,18 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  @include container();
 }
 .Management__greenhouse {
+  @include susy-breakpoint(1240px) {
+    &:nth-child(2n+1) {
+      @include span(first 1 of 2)
+    }
+    &:nth-child(2n) {
+      @include span(1 of 2 last)
+    }
+  }
+
   padding: 10px;
   border-bottom: 1px solid #ccc;
   .info {
@@ -47,6 +57,7 @@
   }
   .realm {
     padding: 10px;
+    margin-top: 20px;
     background-color: #e8e8e8;
     ul {
       list-style: none;
