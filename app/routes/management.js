@@ -15,11 +15,7 @@ export default Ember.Route.extend({
 
   actions: {
     editAll: function(greenHouse) {
-      this.set('_selected', greenHouse);
-      this.render('editAllManagement', {
-        outlet: 'editManagement',
-        into: 'management'
-      });
+      this.transitionTo('management.editAll', greenHouse)
     },
     editCultivation : function(greenHouse) {
       this.render('editCultivationManagement', {
