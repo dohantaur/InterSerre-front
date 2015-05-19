@@ -2,7 +2,7 @@
 <div class="Management__modal">
   <div class="modal-header">
       <span class="name">{{id}}</span>
-      <button class="close btn-delet">&times;</button>
+      {{#link-to management class="close btn-delet"}}&times;{{/link-to}}
   </div>
   <form class="modal-form" {{action 'saveGreenHouse' model on='submit'}}>
       <div class="modal-body">
@@ -14,19 +14,18 @@
               <label for="step">Étapes</label>
               <div>{{listEtape}}</div>
               {{view "select" content=listEtape selection=model.step class="form-control"}}
-
           </div>
           <div class="form-row">
               <label for="width">Dimension </label>
-              <input name="width" type="number" value={{model.width}} /> &times; <input name="height" type="number" value={{model.height}} />
+              {{input name="width" type="number" value=model.width}}&times;{{input name="height" type="number" value=model.height}}
           </div>
           <div class="form-row">
               <label for="height">Traitement en cours</label>
-              <textarea name="cultivation" rows="2" cols="50" type="text" value={{model.cultivation}} />
+              {{textarea value=model.cultivation cols="50" rows="2"}}
           </div>
           <div class="form-row">
               <label for="height">Observations</label>
-              <textarea name="observation" rows="4" cols="50" type="text" value={{model.observation}} />
+              {{textarea value=model.observation cols="50" rows="4"}}
           </div>
       </div>
       <div class="modal-footer">
