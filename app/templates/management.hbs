@@ -48,6 +48,10 @@
         </div>
       </li>
   {{/each}}
+    <li class="Management__greenhouse ">
+      <button class="btn-new" {{action 'newSerre' greenHouse on='click'}} ><img src="/assets/plus.png"> </button>
+    </li>
+
 </ul>
 {{outlet 'editManagement'}}
 {{outlet}}
