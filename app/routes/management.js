@@ -6,6 +6,9 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    newSerre: function() {
+      this.transitionTo('management.new');
+    },
     editAll: function(greenHouse) {
       this.transitionTo('management.editAll', greenHouse);
     },
