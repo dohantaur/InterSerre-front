@@ -1,0 +1,28 @@
+<div class="overlayer"></div>
+<div class="Management__modal">
+  <div class="modal-header">
+    <h2>{{id}}</h2>
+    <button class="close">&times;</button>
+  </div>
+  <form class="modal-form" {{action 'saveGreenHouse' selected on='submit'}}>
+    <div class="modal-body">
+      <div class="form-row">
+        <label for="type">Type</label>
+        <input name="type" type="text" value={{slected.type}} />
+      </div>
+      <div class="form-row">
+        <label for="step">Etat</label>
+        <input name="step" type="text" value={{slected.step}} />
+      </div>
+      <div class="form-row">
+        <label for="width">Largeur</label>
+        <input name="width" type="number" value={{slected.width}} />
+      </div>
+      <div class="form-row">
+        <label for="height">Hauteur</label>
+        <input name="height" type="number" value={{slected.height}} />
+      </div>
+    </div>
+    <div class="modal-footer"></div>
+  </form>
+</div>

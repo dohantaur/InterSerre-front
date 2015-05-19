@@ -5,8 +5,11 @@ export default Ember.Route.extend({
     return this.store.find('greenHouse');
   },
 
+  selected: null,
+
   actions: {
     editAll: function(greenHouse) {
+      this.set('seleted', greenHouse);
       this.render('editAllManagement', {
         outlet: 'editManagement',
         into: 'management',
@@ -14,14 +17,14 @@ export default Ember.Route.extend({
       });
     },
     editCultivation : function(greenHouse) {
-      this.render('editAllManagement', {
+      this.render('editCultivationManagement', {
         outlet: 'editManagement',
         into: 'management',
         controller: 'management'
       });
     },
     editObservation: function(greenHouse) {
-      this.render('editAllManagement', {
+      this.render('editObservationManagement', {
         outlet: 'editManagement',
         into: 'management',
         controller: 'management'
