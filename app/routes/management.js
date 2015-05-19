@@ -26,6 +26,9 @@ export default Ember.Route.extend({
       }, function(failure) {
         console.error(failure);
       })
+    },
+    doAction() {
+      this.transitionTo('management.new');
     }
   }
 });
