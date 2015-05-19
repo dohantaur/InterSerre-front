@@ -5,31 +5,24 @@ export default Ember.Route.extend({
     return this.store.find('greenHouse');
   },
 
-  _selected: 'null',
-
-  selected: function() {
-    console.log('toto');
-    console.log(this.get('_selected.id'));
-    return this.get('_selected');
-  }.property('_selected'),
-
   actions: {
     editAll: function(greenHouse) {
       this.transitionTo('management.editAll', greenHouse);
     },
     editCultivation : function(greenHouse) {
-      this.render('editCultivationManagement', {
-        outlet: 'editManagement',
-        into: 'management',
-        controller: 'management'
-      });
+      this.transitionTo('management.editCultivation', greenHouse);
     },
     editObservation: function(greenHouse) {
-      this.render('editObservationManagement', {
-        outlet: 'editManagement',
-        into: 'management',
-        controller: 'management'
-      });
+      this.transitionTo('management.editObservation', greenHouse);
+    },
+    saveGreenHouse: function(model) {
+      //this.modelFor('management.editAll').save().then(function(sucess) {
+      var self = this;
+      model.save().then(function(sucess) {
+        self.transitionTo('management');
+      }, function(failure) {
+        console.error(failure);
+      })
     }
   }
 });
