@@ -1,26 +1,20 @@
 <div class="overlayer"></div>
 <div class="Management__modal">
   <div class="modal-header">
-      <span>{{id}}</span>
+      <span class="name">{{id}}</span>
       <button class="close btn-delet">&times;</button>
   </div>
   <form class="modal-form" {{action 'saveGreenHouse' model on='submit'}}>
       <div class="modal-body">
           <div class="form-row">
               <label for="type">Type</label>
-              <input name="type" type="text" value={{model.type}} />
+              {{input name="type" type="text" value=model.type}}
           </div>
           <div class="form-row">
               <label for="step">Étapes</label>
-              <select name="step" value={{model.step}}>
-                  <option value="Jachère">Jachère</option>
-                  <option value="Semis">Semis</option>
-                  <option value="Plants">Plants</option>
-                  <option value="Fleurs">Fleurs</option>
-                  <option value="Croissance">Croissance</option>
-                  <option value="Maturation">Maturation</option>
-                  <option value="Récolte">Récolte</option>
-              </select>
+              <div>{{listEtape}}</div>
+              {{view "select" content=listEtape selection=model.step class="form-control"}}
+
           </div>
           <div class="form-row">
               <label for="width">Dimension </label>
@@ -34,6 +28,9 @@
               <label for="height">Observations</label>
               <textarea name="observation" rows="4" cols="50" type="text" value={{model.observation}} />
           </div>
+      </div>
+      <div class="modal-footer">
+          <input type="submit" value="sauvegarder">
       </div>
   </form>
 </div>
