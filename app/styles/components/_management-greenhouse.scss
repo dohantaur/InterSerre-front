@@ -5,14 +5,13 @@
 }
 .Management__greenhouse {
   background-color: rgba(255,255,255,0.8);
+  margin: 14px 0px;
   @include susy-breakpoint(1240px) {
     &:nth-child(2n+1) {
       @include span(first 49 of 100);
-      @include gutter;
     }
     &:nth-child(2n) {
       @include span(49 of 100 last);
-      @include gutter;
     }
   }
 
@@ -24,19 +23,25 @@
   .info, dl {
     @include container(100%);
     dt {
-      @include span(first 2 of 12);
+      @include span(first 3 of 12);
     }
     dd {
-      @include span(last 10 of 12);
+      @include span(last 9 of 12);
     }
   }
   .sensor {
     padding: 10px 0;
   }
 
+  .value{
+    color:#0851FD;
+    font-size: 1.2em;
+
+  }
+
   .Management__greenhouse-header{
     @include container(100%);
-    margin: 10px 0;
+    margin: 12px 0px;
     line-height: 2.4em;
     color: #628BB3;
     .number, .type {

@@ -17,10 +17,11 @@
               <span>{{greenHouse.width}} &times; {{greenHouse.height}}</span>
           </div>
           <div class="barre-btn">
-            <a href="#" class="btn btn-update"> Modifications </a>
-            <a href="#" class="btn btn-trairement"> Traitements </a>
-            <a href="#" class="btn btn-observ"> Observations </a>
+              <button class="btn btn-update" {{action 'editAll' greenHouse on='click'}}> Modifications </button>
+              <button class="btn btn-trairement" {{action 'editCultivation' greenHouse on='click'}}> Traitements </button>
+              <button class="btn btn-observ" {{action 'editObservation' greenHouse on='click'}}> Observations </button>
           </div>
+
           <dl class="info">
 
               <dt>Etape</dt>
@@ -39,8 +40,8 @@
             {{#each greenHouse.realm.sensors as |sensor|}}
                 <dl class="sensor">
                     <dt></dt>
-                    <dt><span>Capteur&nbsp;<small>n°</small></span><span>{{sensor.id}}</span></dt>
-                    <dd><span>{{sensor.lastValue}}&nbsp;{{sensor.unit}}</span><span>&nbsp;&nbsp;<i>({{sensor.name}})</i></span></dd>
+                    <dt><span>{{sensor.id}}</span></dt>
+                    <dd><span class="value">{{sensor.lastValue}}&nbsp;{{sensor.unit}}</span><span>&nbsp;&nbsp;<i>({{sensor.name}})</i></span></dd>
                 </dl>
             {{/each}}
           </ul>
