@@ -1,6 +1,9 @@
+.barre-btn{
+  width: 100%;
+}
 .btn {
   display: inline-block;
-  margin-bottom: 0;
+  margin: 5px;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -14,6 +17,7 @@
   line-height: 1.42857143;
   border-radius: 0;
   -webkit-user-select: none;
+  min-width:125px;
 }
 
 .btn-trairement {
