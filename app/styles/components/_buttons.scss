@@ -24,30 +24,35 @@
   color: #ffffff;
   background-color: #ec971f;
   border-color: transparent;
-}
-
-.btn-trairement:hover {
-  background-color: #df691a;
+  &:hover {
+    background-color: #df691a;
+  }
 }
 
 .btn-update {
   color: #ffffff;
   background-color: #61c161;
   border-color: transparent;
-}
-
-.btn-update:hover {
-  background-color: #449d44;
+  &:hover {
+    background-color: #449d44;
+  }
 }
 
 .btn-observ {
   color: #ffffff;
   background-color: #31b0d5;
   border-color: transparent;
+  &:hover {
+    background-color: #1d697f;
+  }
 }
 
-.btn-observ:hover {
-  background-color: #1d697f;
+.btn-action {
+  color: white;
+  background-color: #ad2d2f;
+  &:hover {
+    background-color: #723535;
+  }
 }
 
 .btn-delet{
