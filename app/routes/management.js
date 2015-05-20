@@ -32,7 +32,7 @@ export default Ember.Route.extend({
         self.transitionTo('management');
       }, function(failure) {
         console.error(failure);
-      })
+      });
     }
   }
 });
