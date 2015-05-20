@@ -1,10 +1,10 @@
 .Management__modal {
   position: fixed;
-  top: 25%;
+  top: 17%;
   left: 25%;
   width: 50%;
-  height: 50%;
-  min-height: 400px;
+  height: 73%;
+  min-height: 530px;
   background-color: white;
   padding: 20px;
   z-index: 3;
@@ -15,17 +15,40 @@
   margin: 12px 0px;
   line-height: 2.4em;
   color: #628BB3;
-  .name, .label {
-    float: left;
-  }
+  border-bottom: solid 1px lightgrey;
   .name {
+    float: left;
     font-size: 2.4em;
   }
-  .type {
-    font-size: 1.8em;
+
+}
+.form-row{
+  margin: 17px 40px;
+  @include container(100%);
+  label {
+    font-size: 1em;
     font-style: italic;
-    padding-left: 20px;
+    @include span(first 3 of 12);
   }
+  .ember-view{
+    @include span(last 9 of 12);
+  }
+}
+.form-dim{
+  text-align: center;
+  .ember-view{
+    @include span(last 4 of 12);
+    &:nth-child(2n+1) {
+      float: left;
+    }
+    &:nth-child(2n) {
+      float: right;
+    }
+  }
+}
+.form-control{
+  width: 100%;
+  background-color: white;
 }
 
 .overlayer {
