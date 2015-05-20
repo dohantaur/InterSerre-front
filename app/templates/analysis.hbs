@@ -1,5 +1,9 @@
 
 <div class="content">
-  <h2>Chart 1</h2>
-  {{c3-chart data=model}}
+  {{#each model as |chart|}}
+  <div>
+    <h2>{{chart.realm}}</h2>
+    {{c3-chart data=chart.data}}
+  </div>
+  {{/each}}
 </div>

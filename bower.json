@@ -12,7 +12,8 @@
     "ember-qunit": "0.2.8",
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
-    "c3": "~0.4.10"
+    "c3": "~0.4.10",
+    "moment": "~2.10.3"
   },
   "devDependencies": {
     "susy": "~2.2.5"

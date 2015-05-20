@@ -14,6 +14,8 @@ app.import('bower_components/d3/d3.min.js');
 app.import('bower_components/c3/c3.css');
 app.import('bower_components/c3/c3.min.js');
 
+app.import('bower_components/moment/moment.js');
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
