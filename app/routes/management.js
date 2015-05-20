@@ -9,6 +9,10 @@ export default Ember.Route.extend({
     newSerre: function() {
       this.transitionTo('management.new');
     },
+    cancel:function(greenHouse){
+      greenHouse.rollback();
+      this.transitionTo('management');
+    },
     editAll: function(greenHouse) {
       this.transitionTo('management.editAll', greenHouse);
     },
@@ -18,6 +22,9 @@ export default Ember.Route.extend({
     editObservation: function(greenHouse) {
       this.transitionTo('management.editObservation', greenHouse);
     },
+    doAction: function() {
+      this.transitionTo('management.action');
+    },
     saveGreenHouse: function(model) {
       //this.modelFor('management.editAll').save().then(function(sucess) {
       var self = this;
@@ -26,9 +33,6 @@ export default Ember.Route.extend({
       }, function(failure) {
         console.error(failure);
       })
-    },
-    doAction() {
-      this.transitionTo('management.new');
     }
   }
 });

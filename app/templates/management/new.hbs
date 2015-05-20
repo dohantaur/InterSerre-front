@@ -1,2 +1,37 @@
 <div class="overlayer"></div>
-<div class="Management__modal" ></div>
+<div class="Management__modal">
+    <div class="modal-header">
+        <span class="name">Nom de la serre : <br/></span>
+        {{input name="type" type="text" value=model.id}}
+        {{#link-to 'management' class="btn btn-delet"}}&times; Annuler{{/link-to}}
+    </div>
+    <form class="modal-form" {{action 'saveGreenHouse' model on='submit'}}>
+        <div class="modal-body">
+            <div class="form-row">
+                <label for="type">Type</label>
+              {{input name="type" type="text" value=model.type}}
+            </div>
+            <div class="form-row">
+                <label for="step">Étapes</label>
+              {{view "select" content=listEtape selection=model.step class="form-control"}}
+            </div>
+            <div class="form-row">
+                <label for="width">Dimension </label>
+                <div class="form-dim">
+                    {{input name="width" type="number" value=model.width}}&times;{{input name="height" type="number" value=model.height}}
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="height">Traitement en cours</label>
+              {{textarea value=model.cultivation class="form-control" rows="2"}}
+            </div>
+            <div class="form-row">
+                <label for="height">Observations</label>
+              {{textarea value=model.observation class="form-control" rows="4"}}
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-save" {{action 'saveGreenHouse' model on='click' bubble=true}}>&#10004; Sauvegarder </button>
+        </div>
+    </form>
+</div>

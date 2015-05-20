@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('editAll', { path: '/edit/:id' });
     this.route('editObservation', { path: '/edit-observation/:id' });
     this.route('editCultivation', { path: '/edit-cultivation/:id' });
+    this.route('action');
     this.route('new');
   });
 });
