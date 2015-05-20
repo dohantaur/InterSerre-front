@@ -17,7 +17,7 @@
   line-height: 1.42857143;
   border-radius: 0;
   -webkit-user-select: none;
-  min-width:125px;
+  min-width:135px;
 }
 
 .btn-trairement {
@@ -60,8 +60,7 @@
   background-color: #d9534f;
   border-color: transparent;
   float :right;
-  margin : 20px;
-  margin-right: 0px;
+  margin-left: 20px;
   &:hover {
     background-color: #C9302C;
   }
@@ -71,8 +70,7 @@
   background-color: #61c161;
   border-color: transparent;
   float :right;
-  margin : 20px;
-  margin-right: 0px;
+  margin-left: 20px;
   &:hover {
     background-color: #449d44;
   }

@@ -3,7 +3,6 @@
     <div class="modal-header">
         <span class="name">Nom de la serre : <br/></span>
         {{input name="type" type="text" value=model.id}}
-        <button class="btn btn-delet" {{action 'cancel' model on='click'}}> &times; Annuler</button>
     </div>
     <form class="modal-form" {{action 'saveGreenHouse' model on='submit'}}>
         <div class="modal-body">
@@ -31,7 +30,8 @@
             </div>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-save" {{action 'cancel' model on='click' bubble=true}}>&#10004; Sauvegarder </button>
+            <button class="btn btn-save" {{action 'saveGreenHouse' model on='click' bubble=true}}>&#10004; Sauvegarder </button>
+            <button class="btn btn-delet" {{action 'cancel' model on='click'}}> &times; Annuler</button>
         </div>
     </form>
 </div>

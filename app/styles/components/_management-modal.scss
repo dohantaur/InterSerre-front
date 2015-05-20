@@ -3,8 +3,8 @@
   top: 17%;
   left: 25%;
   width: 50%;
-  height: 73%;
-  min-height: 560px;
+  height: 60%;
+  min-height: 500px;
   background-color: white;
   padding: 20px;
   z-index: 3;
@@ -15,10 +15,15 @@
   margin: 12px 0px;
   line-height: 2.4em;
   color: #628BB3;
-  border-bottom: solid 1px lightgrey;
+  border-bottom: solid 1px #628BB3;
   .name {
     float: left;
     font-size: 2.4em;
+  }
+  .ember-view{
+    width: 100%;
+    margin: 5px 0;
+    font-size: 1.5em;
   }
 
 }

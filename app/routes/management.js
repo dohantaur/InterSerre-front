@@ -22,8 +22,8 @@ export default Ember.Route.extend({
     editObservation: function(greenHouse) {
       this.transitionTo('management.editObservation', greenHouse);
     },
-    doAction: function() {
-      this.transitionTo('management.action');
+    doAction: function(greenHouse) {
+      this.transitionTo('management.action', greenHouse);
     },
     saveGreenHouse: function(model) {
       //this.modelFor('management.editAll').save().then(function(sucess) {

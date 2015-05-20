@@ -1,2 +1,18 @@
 <div class="overlayer"></div>
-<div class="Management__modal"></div>
+<div class="Management__modal">
+    <div class="modal-header">
+        <span class="name">{{model.id}}</span>
+    </div>
+    <form class="modal-form" {{action 'saveGreenHouse' model on='submit'}}>
+        <div class="modal-body">
+            <div class="form-row">
+                <label for="height">Management de la serre</label>
+                {{input type="checkbox" name="isAdmin" checked=isAdmin}}Allumé
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-save" {{action 'saveGreenHouse' model on='click' bubble=true}}>&#10004; Sauvegarder </button>
+            <button class="btn btn-delet" {{action 'cancel' model on='click'}}> &times; Annuler</button>
+        </div>
+    </form>
+</div>
