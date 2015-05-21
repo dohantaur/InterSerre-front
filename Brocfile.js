@@ -16,6 +16,8 @@ app.import('bower_components/c3/c3.min.js');
 app.import('vendor/jquery.orbit-1.2.3.js');
 app.import('vendor/jquery.orbit-1.2.3.min.js');
 
+app.import('bower_components/moment/moment.js');
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //

@@ -4,6 +4,8 @@ export default Ember.Component.extend({
   tagName: 'div',
   classNames: ['c3-chart'],
   axis: {},
+  xs: {},
+  xFormat: '',
   regions: {},
   bar: {},
   pie: {},
@@ -55,7 +57,9 @@ export default Ember.Component.extend({
       'size',
       'padding',
       'color',
-      'transition'
+      'transition',
+      'xs',
+      'xFormat'
     ]);
     config.bindto = this.get('element');
     return config;
@@ -74,7 +78,9 @@ export default Ember.Component.extend({
     'size',
     'padding',
     'color',
-    'transition'),
+    'transition',
+    'xs',
+    'xFormat'),
 
   dataDidChange: function() {
     var chart = this.get('chart');
