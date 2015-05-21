@@ -4,7 +4,9 @@ export default Ember.Route.extend({
   model: function() {
     return new Ember.RSVP.Promise(function(resolve, reject) {
       var datas = Ember.$.getJSON('http://localhost:3000/api/analysis', function(data) {
-        var result = data.result;
+        console.log(data);
+        resolve(data);
+        /*var result = data.result;
         var realms = [];
 
         result.forEach(function(realm) {
@@ -97,7 +99,7 @@ export default Ember.Route.extend({
               'lumiere': 'x1',
               'humidite': 'x3'
             },*/
-            xFormat: '%Y-%m-%d %H:%M:%S'
+            /*xFormat: '%Y-%m-%d %H:%M:%S',
             axis: {
               x1: {
                 type: 'timeseries',
@@ -123,7 +125,7 @@ export default Ember.Route.extend({
             }
           }
         });
-        resolve(allFirstCharts);
+        resolve(allFirstCharts);*/
       });
 
     })
