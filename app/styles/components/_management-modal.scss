@@ -77,25 +77,25 @@
   margin-bottom: 10px;
   min-height: 40px;
 }
-.form-action{
+.form-action {
   label {
     font-size: 1em;
     font-style: italic;
     @include span(first 4 of 12);
   }
-  .one-line{
+  .one-line {
     text-align: left;
     white-space: nowrap;
     @include span(last 8 of 12);
-    .ember-view{
+    .ember-view {
       margin: 5px;
     }
   }
+}
 #management-loading-page {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 2;
   background-color: rgba(0,0,0,0.6);
-
 }
