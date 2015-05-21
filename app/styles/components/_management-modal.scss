@@ -5,6 +5,7 @@
   width: 50%;
   height: 60%;
   min-height: 500px;
+  min-width: 320px;
   background-color: white;
   padding: 20px;
   z-index: 3;
@@ -25,7 +26,6 @@
     margin: 5px 0;
     font-size: 1.5em;
   }
-
 }
 .form-row{
   margin: 17px 40px;
@@ -55,7 +55,6 @@
   width: 100%;
   background-color: white;
 }
-
 .overlayer {
   position: fixed;
   top: 0;
@@ -64,4 +63,23 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 2;
+}
+.modal-body{
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+.form-action{
+  label {
+    font-size: 1em;
+    font-style: italic;
+    @include span(first 4 of 12);
+  }
+  .one-line{
+    text-align: left;
+    white-space: nowrap;
+    @include span(last 8 of 12);
+    .ember-view{
+      margin: 5px;
+    }
+  }
 }

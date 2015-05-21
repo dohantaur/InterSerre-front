@@ -4,6 +4,7 @@ var sensor =  DS.Model.extend({
   realm: DS.belongsTo('realm' , {async: true}),
   name: DS.attr('string'),
   unit:DS.attr('string'),
+  light:DS.attr('boolean'),
   lastValue: DS.attr('number'),
   values: []
 });

@@ -5,9 +5,9 @@
     </div>
     <form class="modal-form" {{action 'saveGreenHouse' model on='submit'}}>
         <div class="modal-body">
-            <div class="form-row">
+            <div class="form-action">
                 <label for="height">Management de la serre</label>
-                {{input type="checkbox" name="isAdmin" checked=isAdmin}}Allumé
+                <div class="one-line">{{input type="checkbox" name="light" checked=isAdmin}}   Allumée</div>
             </div>
         </div>
         <div class="modal-footer">
