@@ -7,11 +7,11 @@
         <div class="modal-body">
             <div class="form-action">
                 <label for="height">Management de la serre</label>
-                <div class="one-line">{{input type="checkbox" name="light" checked=isAdmin}}   Allumée</div>
+                <div class="one-line">{{input type="checkbox" name="action" checked=actionValue}}   Allumée</div>
             </div>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-save" {{action 'saveGreenHouse' model on='click' bubble=true}}>&#10004; Sauvegarder </button>
+            <button class="btn btn-save" {{action 'saveAction' on='click' bubble=true}}>&#10004; Sauvegarder </button>
             <button class="btn btn-delet" {{action 'cancel' model on='click'}}> &times; Annuler</button>
         </div>
     </form>
