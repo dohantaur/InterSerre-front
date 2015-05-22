@@ -1,10 +1,24 @@
 .Moche{
   overflow: hidden;
   white-space: nowrap;
+  margin: auto;
+  width: 1000px;
 }
 
 .Carousel{
-  text-align: center;
   display: block;
+}
+
+.img1{
+  transform: translateX(0);
+  transition:background-position .1s ease-in;
+}
+.img2{
+  transform: translateX(-1000px);
+  transition:background-position .1s ease-in;
+}
+.img3{
+  transform: translateX(-2000px);
+  transition:background-position .1s ease-in;
 }
 
