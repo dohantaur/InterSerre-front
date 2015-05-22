@@ -22,16 +22,21 @@
               <button class="btn btn-observ" {{action 'editObservation' greenHouse on='click'}}> Observations </button>
               <button class="btn btn-action" {{action 'doAction' greenHouse on='click'}}> Actions </button>
           </div>
+          <div class='top'>
+            <dl class="info part1">
 
-          <dl class="info">
+                <dt>Étapes</dt>
+                <dd>{{greenHouse.step}}</dd>
+                <dt>Traitement en cours</dt>
+                <dd>{{greenHouse.cultivation}}</dd>
+                <dt>Observations</dt>
+                <dd>{{greenHouse.observation}}</dd>
+            </dl>
+            <div class="part2">
+              <img src="/assets/{{greenHouse.type}}.jpg" />
+            </div>
+          </div>
 
-              <dt>Étapes</dt>
-              <dd>{{greenHouse.step}}</dd>
-              <dt>Traitement en cours</dt>
-              <dd>{{greenHouse.cultivation}}</dd>
-              <dt>Observations</dt>
-              <dd>{{greenHouse.observation}}</dd>
-          </dl>
           <div class="realm">
               <div class="realm-header">
                 <span>Realm</span>
