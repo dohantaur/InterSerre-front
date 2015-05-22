@@ -13,8 +13,6 @@ var app = new EmberApp({
 app.import('bower_components/d3/d3.min.js');
 app.import('bower_components/c3/c3.css');
 app.import('bower_components/c3/c3.min.js');
-app.import('vendor/jquery.orbit-1.2.3.js');
-app.import('vendor/jquery.orbit-1.2.3.min.js');
 
 app.import('bower_components/moment/moment.js');
 
